@@ -15,7 +15,7 @@ pool:
 
 jobs:
   - job: build_push_image
-    displayName: "Build an Push Image"
+    displayName: "Build and Push Image"
 
     steps:
     - script: echo Hello, world!
