@@ -4,7 +4,8 @@
 # https://aka.ms/yaml
 
 variables:
-  imageName: 'pipelines-javascript-docker'
+  imageName: 'dockusgeorgus/pipelines-javascript-docker'
+  dockerHub: 'DockerHub'
 
 trigger:
 - master
@@ -31,6 +32,6 @@ jobs:
     - task: Docker@2
       displayName: Push image
       inputs:
-        containerRegistry: "DockerHub"
+        containerRegistry: $(dockerHub)
         repository: $(imageName)
         command: push
