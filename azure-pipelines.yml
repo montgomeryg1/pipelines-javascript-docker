@@ -5,7 +5,6 @@
 
 variables:
   imageName: 'pipelines-javascript-docker'
-  dockerhub: 'DockerHub'
 
 trigger:
 - master
@@ -32,7 +31,6 @@ jobs:
     - task: Docker@2
       displayName: Push image
       inputs:
-        containerRegistry: |
-          $(dockerhub)
+        containerRegistry: "DockerHub"
         repository: $(imageName)
         command: push
