@@ -35,5 +35,3 @@ jobs:
           $(dockerhub)
         repository: $(imageName)
         command: push
-        tags: |
-          test
